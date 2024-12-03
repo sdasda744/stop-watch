@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./output.css">
+    <title>Stop Watch</title>
+</head>
+<body class="bg-gradient-to-tr flex items-center from-slate-500 via-slate-600 to-slate-700 h-screen">
+    <div class="mx-auto flex flex-col gap-3">
+        <!-- <h1 class="text-5xl font-bold text-slate-50 mb-4 text-center">Stop watch</h1> -->
+        <div class="bg-slate-800 relative h-[100px] flex items-center justify-center max-w-md rounded-lg shadow-lg">
+            <div class="flex justify-items-center justify-evenly  gap-4">
+                <span class="hour-text text-5xl font-semibold text-slate-50 p-2 select-none">00</span>
+                <span class="text-5xl font-semibold text-slate-50 p-2 select-none">:</span>
+                <span class="minute-text text-5xl font-semibold text-slate-50 p-2 select-none">00</span>
+                <span class="text-5xl font-semibold text-slate-50 p-2 select-none">:</span>
+                <span class="second-text text-5xl font-semibold text-slate-50 p-2 select-none">00</span>
+                <span class="absolute right-0 bottom-0 milliseconds-text text-sm font-semibold text-slate-50 p-2 select-none">0</span>
+            </div>
+            
+        </div>
+        <div class="flex gap-4">
+            <button id="startBtn" class="text-lg bg-green-500 px-3 py-2 rounded-lg shadow-lg w-24 text-slate-50 font-medium">Start</button>
+            <button id="pauseBtn" class="text-lg bg-red-500 px-3 py-2 rounded-lg shadow-lg w-24 text-slate-50 font-medium">Pause</button>
+            <button id="continueBtn" class="text-lg bg-blue-500 px-3 py-2 rounded-lg shadow-lg w-24 text-slate-50 font-medium">Continue</button>
+            <button id="restartBtn" class="text-lg bg-pink-500 px-3 py-2 rounded-lg shadow-lg w-24 text-slate-50 font-medium">Restart</button>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
