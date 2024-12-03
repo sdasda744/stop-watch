@@ -2,13 +2,14 @@ const startBtn = document.querySelector("#startBtn");
 const pauseBtn = document.querySelector("#pauseBtn");
 const continueBtn = document.querySelector("#continueBtn");
 const restartBtn = document.querySelector("#restartBtn");
+const resetBtn = document.querySelector("#resetBtn");
 
 const hourText = document.querySelector(".hour-text");
 const minuteText = document.querySelector(".minute-text");
 const secondText = document.querySelector(".second-text");
 const millisecondsText = document.querySelector(".milliseconds-text");
 
-let second = 1, minute = 0, hour = 0, milliseconds = 0;
+let second = 0, minute = 0, hour = 0, milliseconds = 0;
 
 const startTime = () => {
     milliseconds += 10;
@@ -35,6 +36,7 @@ const startTime = () => {
 let intervalID;
 
 startBtn.addEventListener("click", () => {
+    clearInterval(intervalID);
     intervalID = setInterval(startTime, 10);
 })
 
@@ -47,12 +49,12 @@ continueBtn.addEventListener("click", () => {
     intervalID = setInterval(startTime, 10);
 })
 
-restartBtn.addEventListener("click", () => {
-    second = 0, minute = 0, hour = 0;
+resetBtn.addEventListener("click", () => {
+    second = 0, minute = 0, hour = 0, milliseconds = 0;
     clearInterval(intervalID);
     hourText.textContent = "0" + 0;
     minuteText.textContent = "0" + 0;
     secondText.textContent = "0" + 0;
-    intervalID = setInterval(startTime, 10);
+    millisecondsText.textContent = 0;
 })
 
